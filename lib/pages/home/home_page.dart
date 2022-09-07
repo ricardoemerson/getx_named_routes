@@ -23,6 +23,12 @@ class HomePage extends StatelessWidget {
             ),
             ElevatedButton(
               onPressed: () {
+                Get.toNamed('/sent-parameters');
+              },
+              child: const Text('Envio de parâmetros'),
+            ),
+            ElevatedButton(
+              onPressed: () {
                 Get.toNamed('/invalid-route');
               },
               child: const Text('Try to navigate to invalid route'),
