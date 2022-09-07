@@ -29,6 +29,12 @@ class HomePage extends StatelessWidget {
             ),
             ElevatedButton(
               onPressed: () {
+                Get.toNamed('/middlewares');
+              },
+              child: const Text('Middlewares'),
+            ),
+            ElevatedButton(
+              onPressed: () {
                 Get.toNamed('/invalid-route');
               },
               child: const Text('Try to navigate to invalid route'),
