@@ -5,6 +5,7 @@ import 'pages/access_denied/access_denied_page.dart';
 import 'pages/home/home_page.dart';
 import 'pages/middlewares/middlewares_page.dart';
 import 'pages/middlewares/route_middlewares.dart';
+import 'pages/nested_navigation/nested_navigation_page.dart';
 import 'pages/page_not_found/page_not_found_page.dart';
 import 'pages/sent_parameters/arguments_params/arguments_params_page.dart';
 import 'pages/sent_parameters/path_params/path_params_page.dart';
@@ -51,10 +52,8 @@ class MyApp extends StatelessWidget {
             RouteMiddlewares(),
           ],
         ),
-        GetPage(
-          name: '/access-denied',
-          page: AccessDeniedPage.new,
-        ),
+        GetPage(name: '/access-denied', page: AccessDeniedPage.new),
+        GetPage(name: '/nested-navigation', page: NestedNavigationPage.new),
       ],
       routingCallback: (Routing? routing) {
         debugPrint('routing.previous: ${routing?.previous}');

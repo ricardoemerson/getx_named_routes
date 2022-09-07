@@ -35,6 +35,12 @@ class HomePage extends StatelessWidget {
             ),
             ElevatedButton(
               onPressed: () {
+                Get.toNamed('/nested-navigation');
+              },
+              child: const Text('Nested Navigation'),
+            ),
+            ElevatedButton(
+              onPressed: () {
                 Get.toNamed('/invalid-route');
               },
               child: const Text('Try to navigate to invalid route'),
