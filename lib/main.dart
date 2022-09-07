@@ -36,6 +36,10 @@ class MyApp extends StatelessWidget {
           ],
         ),
       ],
+      routingCallback: (Routing? routing) {
+        debugPrint('routing.previous: ${routing?.previous}');
+        debugPrint('routing.current: ${routing?.current}');
+      },
       unknownRoute: GetPage(name: '/404', page: PageNotFoundPage.new),
     );
   }
